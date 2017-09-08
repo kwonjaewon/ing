@@ -16,17 +16,17 @@
     <title>QMS ing</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css?ver=4" rel="stylesheet">
-    <link href="css/carousel.css?ver=4" rel="stylesheet">
+    <link href="css/bootstrap.css?ver=5" rel="stylesheet">
+    <link href="css/carousel.css?ver=5" rel="stylesheet">
 
 
     <style type="text/css">
-        /*
+        
         body {
             padding-top: 67px;
             padding-bottom: 40px;
         }
-        */
+        
 
         .bar1, .bar2, .bar3 {
             width: 20px;
@@ -55,11 +55,11 @@
             font-size: 17px;
             padding-top: 15px;
         }
-
+        */
         #iframe_id {
             width: 100%;
         }
-        */
+        
 
     </style>      
 
@@ -98,13 +98,13 @@
 
               <ul class="nav navbar-nav">
 
-                <li><a href="#"><b>Home</b></a></li>
+                <li><a id="home" href="if_mainPage.html" target="iframe_name"><b>Home</b></a></li>
 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">기준정보 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">회사정보 관리</a></li>
-                    <li><a href="#">공정구분코드 관리</a></li>
+                    <li><a id="companyInfo" href="if_companyInfo.html" target="iframe_name">회사정보 관리</a></li>
+                    <li><a id="processClassificationCode" href="if_processClassificationCode.html" target="iframe_name">공정구분코드 관리</a></li>
                     <li><a href="#">공정코드 일괄등록</a></li>
                     <li><a href="#">공정상세코드 관리</a></li>
                     <!--
@@ -159,6 +159,14 @@
 
               </ul>
 
+            <!--
+            <form class="navbar-form pull-right">
+                <input class="span2" type="text" placeholder="id">
+                <input class="span2" type="password" placeholder="Password">
+                <button type="submit" class="btn">Log in</button>
+            </form>
+            -->
+
             </div>
 
           </div>
@@ -170,9 +178,9 @@
 
 
     <!-- Carousel
-    ================================================== -->
+    ================================================== 
+    
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -258,238 +266,381 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div><!-- /.carousel -->
+    </div>
+        -->
+        <!-- /.carousel -->
 
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div id="overlay" class="container marketing">
+          <!-- Wrap the rest of the page in another container to center all the content.
 
-    <div class="container marketing">
+        <div class="container marketing">
+          <div class="row">
+            <div class="col-lg-4">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h2>Heading</h2>
+              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h2>Heading</h2>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h2>Heading</h2>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+          -->
+          <!-- /.row -->
+          <!-- START THE FEATURETTES -->
+          <!--
+        <hr class="featurette-divider">
+          <style>
+              div.circle{
+                  width:auto;
+                  height:auto;
+              }
+              div.outer-circle{
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+                  background:transparent;
+                  width:130px;
+                  height:130px;
+
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+                  position:absolute;
+                  z-index:800;
+                  border:2px solid silver;
+                  -webkit-transition: all .4s ease-in-out;
+                  -moz-transition: all .4s ease-in-out;
+                  -o-transition: all .4s ease-in-out;
+                  transition: all .4s ease-in-out;
+
+              }
+              div.outer-circle.hover {
+                  -moz-transform: scale(2);
+                  -webkit-transform: scale(2);
+                  transform: scale(2);
+              }
+              div.middle-circle {
+                  margin:4px;
+                  width:122px;
+                  height:122px;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+
+                  background: red;
+
+                  position:absolute;
+                  z-index:900;
+                  -webkit-transition: all .2s ease-in-out;
+                  -moz-transition: all .2s ease-in-out;
+                  -o-transition: all .2s ease-in-out;
+                  transition: all .2s ease-in-out;
+
+              }
+              div.middle-circle.hover{
+                  -moz-transform: scale(1.8);
+                  -webkit-transform: scale(1.8);
+                  transform: scale(1.8);
+              }
+              div.inner-circle{
+                  margin:18px;
+                  background:green;
+                  width:96px;
+                  height:96px;
+                  font-size:11px;
+                  color:#FFF;
+                  line-height:96px;
+                  text-align:center;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+
+                  border:2px solid silver;
+                  position:absolute;
+                  z-index:1000;
+                  -webkit-transition: all .5s ease-in-out;
+                  -moz-transition: all .5s ease-in-out;
+                  -o-transition: all .5s ease-in-out;
+                  transition: all .5s ease-in-out;
+              }
+
+              div.inner-circle.hover{
+                  -moz-transform: scale(1.6);
+                  -webkit-transform: scale(1.6);
+                  transform: scale(1.6);
+              }
+              .friend-circle{
+                  height: 58px;
+                  position: absolute;
+                  width: 20px;
+                  left: 0;
+                  top: 0;
+                  transform-origin: bottom center;
+              }
 
 
-      <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
-        <style>
-            div.circle{
-                width:auto;
-                height:auto;
-            }
-            div.outer-circle{
-             
-                background:transparent;
-                width:130px;
-                height:130px;
-             
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-                position:absolute;
-                z-index:800;
-                border:2px solid silver;
-                -webkit-transition: all .4s ease-in-out;
-                -moz-transition: all .4s ease-in-out;
-                -o-transition: all .4s ease-in-out;
-                transition: all .4s ease-in-out;
-             
-            }
-            div.outer-circle.hover {
-                -moz-transform: scale(2);
-                -webkit-transform: scale(2);
-                transform: scale(2);
-            }
-            div.middle-circle {
-                margin:4px;
-                width:122px;
-                height:122px;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-             
-                background: red; 
-          
-                position:absolute;
-                z-index:900;
-                -webkit-transition: all .2s ease-in-out;
-                -moz-transition: all .2s ease-in-out;
-                -o-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-             
-            }
-            div.middle-circle.hover{
-                -moz-transform: scale(1.8);
-                -webkit-transform: scale(1.8);
-                transform: scale(1.8);
-            }
-            div.inner-circle{
-                margin:18px;
-                background:green;
-                width:96px;
-                height:96px;
-                font-size:11px;
-                color:#FFF;
-                line-height:96px;
-                text-align:center;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                border-radius: 50%;
-             
-                border:2px solid silver;
-                position:absolute;
-                z-index:1000;
-                -webkit-transition: all .5s ease-in-out;
-                -moz-transition: all .5s ease-in-out;
-                -o-transition: all .5s ease-in-out;
-                transition: all .5s ease-in-out;
-            }
-            
-            div.inner-circle.hover{
-                -moz-transform: scale(1.6);
-                -webkit-transform: scale(1.6);
-                transform: scale(1.6);
-            }
-            .friend-circle{
-                height: 58px;
-                position: absolute;
-                width: 20px;
-                left: 0;
-                top: 0;
-                transform-origin: bottom center;
-            }
-            
-        </style>
+          </style>
+          <div class="row featurette">
+              <div class="col-md-3 text-center">
+                  <div class="circle" onmouseover="circleHover(1);" onmouseout="circleOut(1);">
+                      <div id="oc1" class="outer-circle"></div>
+                      <div id="mc1" class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
+                      <div id="ic1" class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
+                      </div>
+
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="circle" onmouseover="circleHover(2);" onmouseout="circleOut(2);">
+                      <div id="oc2" class="outer-circle"></div>
+                      <div id="mc2" class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
+                      <div id="ic2" class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
+                      </div>
+
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="circle">
+                      <div class="outer-circle"></div>
+                      <div class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
+                      <div class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
+                      <div class="friend-circle"></div>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="circle">
+                      <div class="outer-circle"></div>
+                      <div class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
+                      <div class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
+                      <div class="friend-circle"></div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+        <hr class="featurette-divider">
+
         <div class="row featurette">
-            <div class="col-md-3 text-center">
-                <div class="circle" onmouseover="circleHover(1);" onmouseout="circleOut(1);">
-                    <div id="oc1" class="outer-circle"></div>
-                    <div id="mc1" class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
-                    <div id="ic1" class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="circle" onmouseover="circleHover(2);" onmouseout="circleOut(2);">
-                    <div id="oc2" class="outer-circle"></div>
-                    <div id="mc2" class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
-                    <div id="ic2" class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="circle">
-                    <div class="outer-circle"></div>
-                    <div class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
-                    <div class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
-                    <div class="friend-circle"></div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="circle">
-                    <div class="outer-circle"></div>
-                    <div class="middle-circle"  style="background-image:url('img/2.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center center;"></div>
-                    <div class="inner-circle" style="background-image:url('img/8.jpg');  background-size:cover; background-repeat: no-repeat; background-position: center center;">
-                    <div class="friend-circle"></div>
-                    </div>
-                    
-                </div>
-            </div>
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </div>
         </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        -->
+
+          <!-- /END THE FEATURETTES -->
+          <!-- FOOTER -->
+
+
+        <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+
+        <hr>
+
+          
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
         
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
+          <script src="js/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+          <script>
+              /*
+                  $(function() {
+                      $('div.circle').mouseover(function() {
+                          $('div.outer-circle').addClass('hover'); $('div.middle-circle').addClass('hover'); $('div.inner-circle').addClass('hover');
+                      });
+                      $('div.circle').mouseout(function() {
+                          $('div.outer-circle').removeClass('hover'); $('div.middle-circle').removeClass('hover'); $('div.inner-circle').removeClass('hover');
+                      });
+                  });
+              */
+              $(function () {
+                  $("h3").lettering();
+              });
+              function circleHover(e) {
+                  $('#oc' + e).addClass('hover'); $('#mc' + e).addClass('hover'); $('#ic' + e).addClass('hover');
+              }
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
+              function circleOut(e) {
+                  $('#oc' + e).removeClass('hover'); $('#mc' + e).removeClass('hover'); $('#ic' + e).removeClass('hover');
+              }
 
-      <hr class="featurette-divider">
+              /////////// - add - ///////////
 
-      <!-- /END THE FEATURETTES -->
-        
+              function myFunction(x) {
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+                  x.classList.toggle("change");
 
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script>
-    /*
-        $(function() {
-            $('div.circle').mouseover(function() {
-                $('div.outer-circle').addClass('hover'); $('div.middle-circle').addClass('hover'); $('div.inner-circle').addClass('hover');
-            });
-            $('div.circle').mouseout(function() {
-                $('div.outer-circle').removeClass('hover'); $('div.middle-circle').removeClass('hover'); $('div.inner-circle').removeClass('hover');
-            });
-        });
-    */
-        $(function() {
-            $("h3").lettering();
-        });
-        function circleHover(e){
-            $('#oc'+e).addClass('hover'); $('#mc'+e).addClass('hover'); $('#ic'+e).addClass('hover');
-        }
-            
-        function circleOut(e){
-            $('#oc'+e).removeClass('hover'); $('#mc'+e).removeClass('hover'); $('#ic'+e).removeClass('hover');
-        }
+              }
 
-        function myFunction(x) {
+              function on() {
+                  //document.getElementById("overlay").style.opacity = "1";
+                  $("#overlay").fadeTo("fast", 1);
+                  $("#element_disable").remove();
 
-            x.classList.toggle("change");
+                  //document.getElementById("overlay").style.display = 'block';
 
-        }
-            
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/lettering.js"></script>
-  </body>
+              }
+
+              function off() {
+
+                  $("#overlay").fadeTo("fast", 0.3);
+                  $("#overlay").append('<div id="element_disable" style="position: fixed;top:0;left:0;width: 100%;height:100%;z-index:2;opacity:0.4;filter: alpha(opacity = 50)"></div>');
+
+              }
+
+              $(document).ready(function () {
+
+                  //alert('ready function');
+
+                  $(".navbar-collapse").on('show.bs.collapse', function () {
+                      //alert('show');
+                      off();
+
+                  });
+
+                  $(".navbar-collapse").on('hide.bs.collapse', function () {
+                      //alert('hide');
+                      on();
+                  });
+
+                  /////////////////////////////////////////////
+
+                  $("#home").click(function () {
+
+                      alert('home click');
+
+                      /* collpse hide funtion */
+                      $(".navbar-collapse").collapse('hide');
+
+                      
+
+                      /* button animation */
+                      myFunction(document.getElementById("id_btn_navbar"));
+
+                      //alert('button animation excute');
+
+                      /* scroll to top */
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+
+                      //alert('scroll to top excute');
+                  });
+
+
+                  $("#companyInfo").click(function () {
+
+                      alert('companyInfo click');
+
+                      /* collpse hide funtion */
+                      $(".navbar-collapse").collapse('hide');
+
+                      //alert('collapse hide excute');
+
+                      /* button animation */
+                      myFunction(document.getElementById("id_btn_navbar"));
+
+                      //alert('button animation excute');
+
+                      /* scroll to top */
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+
+                      //alert('scroll to top excute');
+                  });
+
+                  $("#processClassificationCode").click(function () {
+
+                      alert('processClassificationCode click');
+
+                      /* collpse hide funtion */
+                      $(".navbar-collapse").collapse('hide');
+
+                      //alert('collapse hide excute');
+
+                      /* button animation */
+                      myFunction(document.getElementById("id_btn_navbar"));
+
+                      //alert('button animation excute');
+
+                      /* scroll to top */
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+
+                      //alert('scroll to top excute');
+                  });
+
+
+
+                  ////////////////////////////////////////////
+
+                  /*
+                  $(".btn-success").click(function () {
+                      $(".collapse").collapse('show');
+                  });
+  
+                  $(".btn-warning").click(function () {
+                      $(".collapse").collapse('hide');
+                  });
+                  */
+
+                  /*
+                  $(".nav-collapse").on('shown.bs.collapse', function () {
+                      //alert('shown');
+                  });
+                  */
+
+                  /*
+                  $(".nav-collapse").on('hidden.bs.collapse', function () {
+                      //alert('hidden');
+                  });
+                  */
+
+              });
+
+              function resizeIframe(obj) {
+
+                  obj.style.height = (obj.contentWindow.document.body.scrollHeight + 20) + 'px';
+
+              }
+
+          </script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/lettering.js"></script>
+</body>
 </html>
