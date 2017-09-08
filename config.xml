@@ -12,6 +12,8 @@
   <description>
     QMS description
   </description>
+  
+  <icon src="img/QMS_Logo2.png" />
 
   <author href="www.naver.com" email="sksmssnrh@naver.com">
     나는누고
