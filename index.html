@@ -16,8 +16,8 @@
     <title>QMS ing</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css?ver=5" rel="stylesheet">
-    <link href="css/carousel.css?ver=5" rel="stylesheet">
+    <link href="css/bootstrap.css?ver=30" rel="stylesheet">
+    <link href="css/carousel.css?ver=14" rel="stylesheet">
 
 
     <style type="text/css">
@@ -63,6 +63,16 @@
 
     </style>      
 
+    <script>
+
+        function resizeIframe(obj) {
+            //alert('resize!!');
+            obj.style.height = (obj.contentWindow.document.body.scrollHeight + 20) + 'px';
+
+        }
+
+    </script>
+
 
   </head>
 
@@ -72,7 +82,7 @@
     <div class="navbar-wrapper">
       <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
 
@@ -91,20 +101,20 @@
               </button>
               -->
 
-              <a class="navbar-brand" href="#">Project name</a>
+              <a id="id_login" class="navbar-brand" data-toggle="modal" data-target="#login-modal">Please Login</a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse">
 
               <ul class="nav navbar-nav">
 
-                <li><a id="home" href="if_mainPage.html" target="iframe_name"><b>Home</b></a></li>
+                <li><a id="home" href="if_mainPage.html?ver=9" target="iframe_name"><b>Home</b></a></li>
 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">기준정보 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a id="companyInfo" href="if_companyInfo.html" target="iframe_name">회사정보 관리</a></li>
-                    <li><a id="processClassificationCode" href="if_processClassificationCode.html" target="iframe_name">공정구분코드 관리</a></li>
+                    <li><a id="companyInfo" href="if_companyInfo.html?ver=3" target="iframe_name">회사정보 관리</a></li>
+                    <li><a id="processClassificationCode" href="if_processClassificationCode.html?ver=3" target="iframe_name">공정구분코드 관리</a></li>
                     <li><a href="#">공정코드 일괄등록</a></li>
                     <li><a href="#">공정상세코드 관리</a></li>
                     <!--
@@ -464,7 +474,7 @@
           <!-- FOOTER -->
 
 
-        <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+        <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html?ver1" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
         <hr>
 
@@ -473,8 +483,105 @@
           <p class="pull-right"><a href="#">Back to top</a></p>
           <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
+
+
+          <!-- --------------------------- BEGIN # MODAL LOGIN --------------------------- -->
+
+
+          <div class="modal modal-center fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-center">
+                  <div class="modal-content">
+                      <div class="modal-header" align="center">
+                          <img class="img-circle" id="img_logo" src="img/QMS_Logo2.png">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                          </button>
+                      </div>
+
+                      <!-- Begin # DIV Form -->
+                      <div id="div-forms">
+
+                          <!-- Begin # Login Form -->
+                          <form id="login-form">
+                              <div class="modal-body">
+                                  <div id="div-login-msg">
+                                      <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                      <span id="text-login-msg">Type your username and password.</span>
+                                  </div>
+                                  <input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                                  <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                                  <div class="checkbox">
+                                      <label>
+                                          <input type="checkbox"> Remember me
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                  <div>
+                                      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                                  </div>
+                                  <div>
+                                      <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                      <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                                  </div>
+                              </div>
+                          </form>
+                          <!-- End # Login Form -->
+                          <!-- Begin | Lost Password Form -->
+                          <form id="lost-form" style="display:none;">
+                              <div class="modal-body">
+                                  <div id="div-lost-msg">
+                                      <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                      <span id="text-lost-msg">Type your e-mail.</span>
+                                  </div>
+                                  <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                              </div>
+                              <div class="modal-footer">
+                                  <div>
+                                      <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                  </div>
+                                  <div>
+                                      <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                      <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                  </div>
+                              </div>
+                          </form>
+                          <!-- End | Lost Password Form -->
+                          <!-- Begin | Register Form -->
+                          <form id="register-form" style="display:none;">
+                              <div class="modal-body">
+                                  <div id="div-register-msg">
+                                      <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                      <span id="text-register-msg">Register an account.</span>
+                                  </div>
+                                  <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                                  <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                                  <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                              </div>
+                              <div class="modal-footer">
+                                  <div>
+                                      <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                  </div>
+                                  <div>
+                                      <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                      <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                  </div>
+                              </div>
+                          </form>
+                          <!-- End | Register Form -->
+
+                      </div>
+                      <!-- End # DIV Form -->
+
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- --------------------------- END # MODAL LOGIN --------------------------- -->
+
         
-        </div>
+      </div>
 
           <script src="js/jquery.min.js"></script>
           <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
@@ -531,12 +638,14 @@
                   $(".navbar-collapse").on('show.bs.collapse', function () {
                       //alert('show');
                       off();
+                      $("#overlay").disableScroll();
 
                   });
 
                   $(".navbar-collapse").on('hide.bs.collapse', function () {
                       //alert('hide');
                       on();
+                      $("#overlay").enableScroll();
                   });
 
                   /////////////////////////////////////////////
@@ -606,6 +715,20 @@
                   });
 
 
+                  $.fn.disableScroll = function () {
+                      window.oldScrollPos = $(window).scrollTop();
+
+                      $(window).on('scroll.scrolldisabler', function (event) {
+                          $(window).scrollTop(window.oldScrollPos);
+                          event.preventDefault();
+                      });
+                  };
+
+                  $.fn.enableScroll = function () {
+                      $(window).off('scroll.scrolldisabler');
+                  };
+
+
 
                   ////////////////////////////////////////////
 
@@ -632,12 +755,107 @@
                   */
 
               });
-
+              /*
               function resizeIframe(obj) {
-
+                  alert('resize!!');
                   obj.style.height = (obj.contentWindow.document.body.scrollHeight + 20) + 'px';
 
               }
+
+              window.onload = function () {
+                  //alert('on load!!');
+                  
+
+              }
+              */
+
+              $(function () {
+
+                  var $formLogin = $('#login-form');
+                  var $formLost = $('#lost-form');
+                  var $formRegister = $('#register-form');
+                  var $divForms = $('#div-forms');
+                  var $modalAnimateTime = 300;
+                  var $msgAnimateTime = 150;
+                  var $msgShowTime = 2000;
+
+                  $("form").submit(function () {
+                      switch (this.id) {
+                          case "login-form":
+                              var $lg_username = $('#login_username').val();
+                              var $lg_password = $('#login_password').val();
+                              if ($lg_username == "ERROR") {
+                                  msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                              } else {
+                                  msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                              }
+                              return false;
+                              break;
+                          case "lost-form":
+                              var $ls_email = $('#lost_email').val();
+                              if ($ls_email == "ERROR") {
+                                  msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                              } else {
+                                  msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                              }
+                              return false;
+                              break;
+                          case "register-form":
+                              var $rg_username = $('#register_username').val();
+                              var $rg_email = $('#register_email').val();
+                              var $rg_password = $('#register_password').val();
+                              if ($rg_username == "ERROR") {
+                                  msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                              } else {
+                                  msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                              }
+                              return false;
+                              break;
+                          default:
+                              return false;
+                      }
+                      return false;
+                  });
+
+                  $('#login_register_btn').click(function () { modalAnimate($formLogin, $formRegister) });
+                  $('#register_login_btn').click(function () { modalAnimate($formRegister, $formLogin); });
+                  $('#login_lost_btn').click(function () { modalAnimate($formLogin, $formLost); });
+                  $('#lost_login_btn').click(function () { modalAnimate($formLost, $formLogin); });
+                  $('#lost_register_btn').click(function () { modalAnimate($formLost, $formRegister); });
+                  $('#register_lost_btn').click(function () { modalAnimate($formRegister, $formLost); });
+
+                  function modalAnimate($oldForm, $newForm) {
+                      var $oldH = $oldForm.height();
+                      var $newH = $newForm.height();
+                      $divForms.css("height", $oldH);
+                      $oldForm.fadeToggle($modalAnimateTime, function () {
+                          $divForms.animate({ height: $newH }, $modalAnimateTime, function () {
+                              $newForm.fadeToggle($modalAnimateTime);
+                          });
+                      });
+                  }
+
+                  function msgFade($msgId, $msgText) {
+                      $msgId.fadeOut($msgAnimateTime, function () {
+                          $(this).text($msgText).fadeIn($msgAnimateTime);
+                      });
+                  }
+
+                  function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+                      var $msgOld = $divTag.text();
+                      msgFade($textTag, $msgText);
+                      $divTag.addClass($divClass);
+                      $iconTag.removeClass("glyphicon-chevron-right");
+                      $iconTag.addClass($iconClass + " " + $divClass);
+                      setTimeout(function () {
+                          msgFade($textTag, $msgOld);
+                          $divTag.removeClass($divClass);
+                          $iconTag.addClass("glyphicon-chevron-right");
+                          $iconTag.removeClass($iconClass + " " + $divClass);
+                      }, $msgShowTime);
+                  }
+              });
+
 
           </script>
           <script src="js/bootstrap.min.js"></script>
