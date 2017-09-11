@@ -26,6 +26,13 @@ body {
           border-radius: 6px;
 }
 
+
+.carousel-caption h1 {
+
+  font-size: 22px;
+
+}
+
 .hero-unit h1 {
   margin-bottom: 0;
   font-size: 60px;
@@ -1182,7 +1189,7 @@ img {
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  display: block;
+  
   max-width: 100%;
   height: auto;
 }

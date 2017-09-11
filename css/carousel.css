@@ -115,7 +115,7 @@ body {
     background-color: #777;
   }
 }
-
+/*
 @media (max-width: 480px) {
   .carousel {
       height: 200px;
@@ -134,6 +134,7 @@ body {
     background-color: #777;
   }
 }
+    */
 
 @media (min-width: 768px) {
   /* Navbar positioning foo */
