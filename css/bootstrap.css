@@ -6822,7 +6822,7 @@ button.close {
 
 
 #login-modal .modal-dialog {
-    width: 350px;
+    width:250px;
 }
 
 #login-modal input[type=text], input[type=password] {
@@ -6897,8 +6897,6 @@ height: 100%;
   text-align: left;
   vertical-align: middle; 
 }
-
-
 
 
 
